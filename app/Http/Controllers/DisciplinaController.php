@@ -14,7 +14,11 @@ class DisciplinaController extends Controller
      */
     public function index()
     {
-        //
+        
+        $disciplinas = Disciplina::all();
+
+        return view('disciplinas.index', compact('disciplinas'));
+
     }
 
     /**
