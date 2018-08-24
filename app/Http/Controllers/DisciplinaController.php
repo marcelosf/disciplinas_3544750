@@ -28,7 +28,9 @@ class DisciplinaController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('disciplinas.create');
+
     }
 
     /**
@@ -39,7 +41,11 @@ class DisciplinaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        Disciplina::create($request->all());
+
+        return redirect()->route('disciplinas.index');
+
     }
 
     /**
